@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc Arbitrage Bot</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #0a0c10;
+            color: #e6edf3;
+        }
+        h1 { color: #4c9aff; }
+        a { color: #4c9aff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .card {
+            background: #161b22;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid #30363d;
+        }
+        .badge {
+            display: inline-block;
+            background: #2d333b;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-family: monospace;
+        }
+        pre {
+            background: #0d1117;
+            padding: 1rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            font-size: 0.85rem;
+        }
+        .grid {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .action {
+            background: #21262d;
+            border-radius: 12px;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #8b949e;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>🤖 Arc Arbitrage Bot</h1>
+    <p>AI‑powered trading agent for <strong>Arc Testnet</strong> | Detects price discrepancies & executes arbitrage in USDC/EURC pools.</p>
+
+    <div class="card">
+        <h2>📋 Project Overview</h2>
+        <p>This bot continuously monitors the USDC/EURC Uniswap V3 pool on Arc testnet. When the price drops below a configurable trigger (<code>BUY_TRIGGER = 0.8670</code>), it buys EURC and sets a trailing stop. It also performs:</p>
+        <ul>
+            <li>🎲 Random micro‑swaps (USDC ⇄ EURC) to simulate activity</li>
+            <li>📜 Smart contract deployment & interaction (store value)</li>
+            <li>💧 Liquidity addition (Uniswap V3 LP)</li>
+            <li>🥪 MEV sandwich simulation & backrunning</li>
+            <li>🔐 ZK deposit (Privacy pool on Arc)</li>
+            <li>📦 Batch transactions via Multicall3</li>
+            <li>📋 ERC‑8183 job creation (agentic commerce)</li>
+        </ul>
+        <p><span class="badge">✅ Fully functional</span> <span class="badge">⚡ Sub‑second finality</span> <span class="badge">💸 Gas paid in EURC (Paymaster)</span></p>
+    </div>
+
+    <div class="card">
+        <h2>🔗 Links</h2>
+        <p>📦 <strong>Source code:</strong> <a href="https://github.com/Charly888999/arc-arbitrage-bot" target="_blank">github.com/Charly888999/arc-arbitrage-bot</a></p>
+        <p>🐙 <strong>GitHub:</strong> <a href="https://github.com/Charly888999" target="_blank">@Charly888999</a></p>
+        <p>💬 <strong>Discord (hackathon):</strong> <a href="https://discord.gg/TGnyfKh23V" target="_blank">Canteen / Agora Agents</a></p>
+        <p>📺 <strong>Demo video:</strong> <a href="#">[ссылка на YouTube появится здесь]</a> (soon)</p>
+    </div>
+
+    <div class="card">
+        <h2>⚙️ How to run (for judges)</h2>
+        <pre><code>git clone https://github.com/Charly888999/arc-arbitrage-bot.git
+cd arc-arbitrage-bot
+# Create .env file with your PRIVATE_KEY and RPC_URL (see .env.example)
+cargo run</code></pre>
+        <p>Wallet address used in testnet: <code>0x67238A43244be829F42a2097cc97A8562cC7F909</code> (обновить на ваш)</p>
+    </div>
+
+    <div class="card">
+        <h2>📊 Traction & impact</h2>
+        <p>✔️ Running continuously for days on Arc testnet<br>
+        ✔️ Performed <strong>50+ unique on‑chain actions</strong> (swaps, LP, contracts, ZK, MEV sim)<br>
+        ✔️ No runtime errors after latest fixes<br>
+        ✔️ Contributes to pool price stabilisation and ecosystem testing</p>
+    </div>
+
+    <footer>
+        Built for <strong>Agora Agents Hackathon</strong> (May 2026) on Arc blockchain.<br>
+        Part of <a href="https://community.arc.io" target="_blank">Arc Community</a> & <a href="https://circle.com" target="_blank">Circle</a> ecosystem.
+    </footer>
+</body>
+</html>
